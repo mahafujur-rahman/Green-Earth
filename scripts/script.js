@@ -71,7 +71,7 @@ function showAllCategories(categories) {
     const allDiv = document.createElement("div");
     allDiv.innerHTML = `
         <button id="btn-all" onclick="loadAllPlants()" 
-            class="btn btn-wide btn-sm rounded bg-transparent border-none text-black justify-start hover:bg-green-500 hover:text-white active:bg-green-600 mb-4 md:px-5">
+            class="btn btn-wide btn-sm rounded bg-transparent text-base border-none text-black justify-start hover:bg-green-500 hover:text-white active:bg-green-600 mb-4 md:px-5">
             All Trees
         </button>
     `;
@@ -81,7 +81,7 @@ function showAllCategories(categories) {
         const div = document.createElement("div");
         div.innerHTML = `
             <button id="btn-${category.id}" onclick="loadCategoryWiseData('${category.id}')" 
-                class="btn btn-wide btn-sm rounded bg-transparent border-none text-black justify-start hover:bg-green-500 hover:text-white active:bg-green-600 mb-4 md:px-5">
+                class="btn btn-wide btn-sm rounded text-base bg-transparent border-none text-black justify-start hover:bg-green-500 hover:text-white active:bg-green-600 mb-4 md:px-5">
                 ${category.category_name}
             </button>
         `;
