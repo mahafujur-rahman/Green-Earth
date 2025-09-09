@@ -14,3 +14,7 @@
     "wdth" 100;
 }
 
+.active-button{
+  background-color: #15803D;
+  color: #ffff;
+}
