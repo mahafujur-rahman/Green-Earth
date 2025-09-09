@@ -1,5 +1,6 @@
 // load all plants
 function loadAllPlants() {
+    loadStatus(true)
     const url = `https://openapi.programming-hero.com/api/plants`;
 
     fetch(url)
@@ -50,6 +51,7 @@ function showAllPlants(plants) {
         `;
         container.appendChild(div);
     }
+    loadStatus(false);
 }
 
 // load all categories
@@ -92,12 +94,15 @@ loadAllPlants();
 
 // category wise filter
 function loadCategoryWiseData(id) {
+    loadStatus(true);
     const url = `https://openapi.programming-hero.com/api/category/${id}`;
 
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
             showAllPlants(data.plants);
+
+            // button active
             const allButton = document.querySelectorAll(
                 "#categories-container button"
             );
@@ -200,4 +205,18 @@ function removeFromCart(index) {
     displayCart();
     document.getElementById("my_modal_remove").showModal();
     
+}
+
+// load status
+function loadStatus(isLoading){
+    const spinner = document.getElementById("spinner-section");
+    const Cards = document.getElementById("plants-container");
+
+    if(isLoading){
+        spinner.classList.remove("hidden");   
+        Cards.classList.add("hidden"); 
+    } else {
+        spinner.classList.add("hidden");     
+        Cards.classList.remove("hidden"); 
+    }
 }
