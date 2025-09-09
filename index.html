@@ -115,25 +115,27 @@
 
         <section class="body-container w-11/12 mx-auto ">
             <h2 class="my-10 text-center font-extrabold heading-font text-2xl md:text-4xl">Choose Your Trees</h2>
-            <div class="flex flex-col md:flex-row pb-10 gap-6 justify-center items-start">
+            <div class="flex flex-col md:flex-row pb-10 gap-6 justify-start items-start">
                 <div class="md:flex-1 max-w-[80%] md:max-w-[15%] w-full space-y-4 mx-10  md:p-0">
                     <h3 class="font-bold text-base md:text-xl">Categories: </h3>
                     <div id="categories-container">
                         <!-- categories dynamic -->
                     </div>
                 </div>
-                <div class=" md:flex-[2]">
 
-                    <!-- Loding container -->
-                    <div id="spinner-section" class="flex items-center justify-center h-40">
-                        <span class="loading loading-spinner w-20 h-20 loading-lg text-green-600"></span>
+
+                <div class="md:flex-[2] flex flex-col justify-center items-center min-h-[300px]">
+                    <!-- Loading container -->
+                    <div id="spinner-section" class="flex items-center justify-center h-40 w-screen mx-auto">
+                        <span class="loading loading-spinner w-20 h-20 loading-lg text-green-600 mx-auto"></span>
                     </div>
 
                     <!-- Plants container -->
-                    <div id="plants-container" class="tree-cards grid sm:grid-cols-2 md:grid-cols-3 p-3 gap-5 ">
-                        <!-- Plants card dynamin -->
+                    <div id="plants-container" class="tree-cards grid sm:grid-cols-2 md:grid-cols-3  gap-5 w-full">
+                        <!-- Plants card dynamic -->
                     </div>
                 </div>
+
                 <div class=" md:flex-1 md:max-w-[15%] w-full bg-white shadow-sm rounded p-5 hidden md:block">
                     <div class="cart-details space-y-4">
                         <h3 class="text-xl font font-semibold">Your Cart</h3>
@@ -243,11 +245,6 @@
         </div>
     </dialog>
 
-
-    <!-- Add to Cart button -->
-    <button class="btn bg-green-600 text-white rounded-3xl" onclick="my_modal_1.showModal()">
-        <i class="fa-solid fa-cart-plus mr-2"></i> Add to Cart
-    </button>
 
     <!--Add product Modal -->
     <dialog id="my_modal_add" class="modal">
