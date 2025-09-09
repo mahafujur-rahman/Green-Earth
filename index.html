@@ -113,47 +113,53 @@
 
     <main>
 
-        <section class="body-container w-11/12 mx-auto ">
+        <section class="body-container w-11/12 mx-auto">
             <h2 class="my-10 text-center font-extrabold heading-font text-2xl md:text-3xl">Choose Your Trees</h2>
+
             <div class="flex flex-col md:flex-row pb-10 gap-6 justify-start items-start">
-                <div class="md:flex-1 max-w-[80%] md:max-w-[15%] w-full space-y-4 mx-10  md:p-0">
-                    <h3 class="font-bold text-base md:text-xl">Categories: </h3>
+
+                <!-- Categories Sidebar -->
+                <div class="md:flex-1 max-w-[80%] md:max-w-[15%] w-full space-y-4 mx-10 md:p-0">
+                    <h3 class="font-bold text-base md:text-xl">Categories:</h3>
                     <div id="categories-container">
                         <!-- categories dynamic -->
                     </div>
                 </div>
 
+                <!-- Plants Section -->
+                <div class="md:flex-[2] flex flex-col justify-center items-center min-h-[300px] w-full">
 
-                <div class="md:flex-[2] flex flex-col justify-center items-center min-h-[300px]">
-                    <!-- Loading container -->
-                    <div id="spinner-section" class="flex items-center justify-center h-40 w-screen mx-auto">
-                        <span class="loading loading-spinner w-20 h-20 loading-lg text-green-600 mx-auto"></span>
+                    <!-- Loading Spinner -->
+                    <div id="spinner-section" class="flex items-center justify-center h-40 w-full">
+                        <span class="loading loading-spinner w-20 h-20 text-green-600"></span>
                     </div>
 
                     <!-- Plants container -->
-                    <div id="plants-container" class="tree-cards grid sm:grid-cols-2 md:grid-cols-3  gap-5 w-full">
+                    <div id="plants-container" class="tree-cards grid sm:grid-cols-2 md:grid-cols-3 gap-5 w-full">
                         <!-- Plants card dynamic -->
                     </div>
                 </div>
 
-                <div class=" md:flex-1 md:max-w-[15%] w-full bg-white shadow-sm rounded p-5 hidden md:block">
+                <!-- Cart Sidebar -->
+                <div class="md:flex-1 md:max-w-[15%] w-full bg-white shadow-sm rounded p-5 hidden md:block">
                     <div class="cart-details space-y-4">
-                        <h3 class="text-xl font font-semibold">Your Cart</h3>
-                        <div class="cart-cards space-y-4"></div>
-                        <!-- dynamic cart -->
+                        <h3 class="text-xl font-semibold">Your Cart</h3>
+                        <div class="cart-cards space-y-4">
+                            <!-- dynamic cart -->
+                        </div>
 
                         <hr class="text-slate-300">
                         <div class="flex justify-between px-2">
                             <p>Total:</p>
-                            <p class="cart-total"><i class="fa-solid fa-bangladeshi-taka-sign text-[14px]"></i>0</p>
+                            <p class="cart-total">
+                                <i class="fa-solid fa-bangladeshi-taka-sign text-[14px]"></i>0
+                            </p>
                         </div>
                     </div>
-
                 </div>
+
             </div>
-
         </section>
-
         <section class="about-capmaign max-w-[1090px] w-full mx-auto pb-10 px-4">
             <h2 class="text-center font-extrabold heading-font text-2xl md:text-3xl mb-10">About the Campaign</h2>
 
